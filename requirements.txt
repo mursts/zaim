@@ -1,5 +1,6 @@
 requests
 requests_oauthlib
+requests_toolbelt
 six
 future
 tabulate

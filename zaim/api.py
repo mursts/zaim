@@ -5,10 +5,13 @@ try:
 except ImportError:
     from urlparse import parse_qsl
 import requests
+import requests_toolbelt.adapters.appengine
 from requests_oauthlib import OAuth1
 
 import logging
 logging.captureWarnings(True)
+
+requests_toolbelt.adapters.appengine.monkeypatch()
 
 class Api(object):
     """A wrapper class for the Zaim API"""
